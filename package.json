@@ -19,7 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 3301"
+    "server": "json-server --watch db.json --port 3301",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "homepage": "https://rahuldubey-devops.github.io/TaskMERN/"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:3300/"
+  "proxy": "http://localhost:3300/",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
 }
